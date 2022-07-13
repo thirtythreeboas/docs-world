@@ -1,0 +1,41 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  color: #223867;
+}
+
+.content {
+  display: flex;
+  gap: 36px
+}
+
+.question {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2A477D;
+  padding-left: 15px;
+}
+
+.link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #068CA6;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

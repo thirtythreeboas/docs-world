@@ -1,0 +1,200 @@
+.content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 850px;
+}
+
+.img {
+  border-radius: 50%;
+  width: 315px;
+  height: 315px;
+}
+
+.circles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.subsircle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.topRow, .middleRow, .bottomRow, .column {
+  display: flex;
+}
+
+.imgcontainer {
+  position: relative;
+  cursor: pointer;
+}
+
+.imgcontainer::before {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  display: block;
+  content: " ";
+  width: 40px;
+  height: 40px;
+  background-image: url('/img/icons/plus.png');
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.imgcontainer > p {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 700;
+  color: #223867;
+}
+
+.subsircle * img {
+  position: relative;
+  display: flex;
+  border-radius: 50%;
+  object-fit: none;
+  width: 110px;
+  height: 106px;
+}
+
+.topRow {
+  display: flex;
+  gap: 290px;
+  margin: auto;
+}
+.middleRow {
+  display: flex;
+  gap: 400px;
+  margin: auto;
+}
+.bottomRow {
+  display: flex;
+  gap: 290px;
+  margin: auto;
+}
+.column {
+  position: absolute;
+  bottom: -90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 400px;
+}
+
+#tired {
+  display: none;
+  top: 25px;
+  left: -160px;
+}
+
+#salute {
+  display: none;
+  top: 0px;
+  left: 160px;
+  width: 242px;
+}
+
+#have {
+  display: none;
+  top: 25px;
+  left: -160px;
+  width: 180px;
+}
+
+#head {
+  display: none;
+  top: 0px;
+  left: 160px;
+}
+
+#bones {
+  display: none;
+  top: 15px;
+  left: -160px;
+  width: 120px;
+  text-align: end;
+}
+
+#lungs {
+  display: none;
+  top: -10px;
+  left: 160px;
+  width: 180px;
+}
+
+#scoliosis {
+  display: none;
+  top: -70px;
+  left: 20px;
+}
+
+#legs {
+  display: none;
+  bottom: -90px;
+  left: -45px;
+  width: 209px;
+  text-align: center;
+}
+
+.imgcontainer:hover #tired, .imgcontainer:hover #salute, .imgcontainer:hover #have, .imgcontainer:hover #head, .imgcontainer:hover #bones, .imgcontainer:hover #lungs, .imgcontainer:hover #scoliosis, .imgcontainer:hover #legs {
+  display: flex;
+}
+
+@media (max-width: 1000px) {
+  .content {
+    min-height: auto;
+    margin: 30px 0;
+  }
+  .circles {
+    position: static;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+  .img {
+    display: none;
+  }
+  .circles {
+    flex-direction: row;
+    width: 100%;
+  }
+  .subsircle {
+    gap: 20px;
+  }
+  .topRow, .middleRow, .bottomRow, .column {
+    position: static;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .imgcontainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  #tired, #salute, #have, #head, #bones, #lungs, #scoliosis, #legs {
+    display: inline;
+    width: 50%;
+    text-align: end;
+    position: static;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .imgcontainer:hover #tired, .imgcontainer:hover #salute, .imgcontainer:hover #have, .imgcontainer:hover #head, .imgcontainer:hover #bones, .imgcontainer:hover #lungs, .imgcontainer:hover #scoliosis, .imgcontainer:hover #legs {
+    display: inline;
+  }
+}
